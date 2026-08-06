@@ -116,3 +116,26 @@ filterButtons.forEach(button => {
 });
 
 renderTodos();
+
+// ===== DARK / LIGHT MODE TOGGLE =====
+const themeToggleBtn = document.getElementById("themeToggle");
+
+function applyTheme(theme) {
+    if (theme === "dark") {
+        document.body.classList.add("dark-mode");
+        themeToggleBtn.textContent = "☀️ Light Mode";
+    } else {
+        document.body.classList.remove("dark-mode");
+        themeToggleBtn.textContent = "🌙 Dark Mode";
+    }
+}
+
+const savedTheme = localStorage.getItem("theme") || "light";
+applyTheme(savedTheme);
+
+themeToggleBtn.addEventListener("click", () => {
+    const isDark = document.body.classList.contains("dark-mode");
+    const newTheme = isDark ? "light" : "dark";
+    applyTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+});
