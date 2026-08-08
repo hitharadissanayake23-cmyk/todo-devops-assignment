@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #666;
+}
+
+.todo-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.todo-form input {
+    flex: 1;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    border-radius: 7px;
+    padding: 11px 16px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.todo-form button {
+    background: #222;
+    color: white;
+}
+
+.todo-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+#task-count {
+    color: #666;
+}
+
+.filters {
+    display: flex;
+    gap: 5px;
+}
+
+.filter {
+    background: #eee;
+}
+
+.filter.active {
+    background: #222;
+    color: white;
+}
+
+#todo-list {
+    list-style: none;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.todo-item.completed .task-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.task-text {
+    flex: 1;
+}
+
+.delete-btn {
+    background: #eee;
+}
+
+.empty-message {
+    text-align: center;
+    color: #888;
+    padding: 25px 0;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    .todo-form {
+        flex-direction: column;
+    }
+
+    .todo-info {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filters {
+        justify-content: center;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+}

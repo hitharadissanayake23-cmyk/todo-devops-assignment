@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Todo Application</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <h1>TaskFlow</h1>
+            <p>Simple and productive task management</p>
+        </header>
+
+        <section class="todo-card">
+
+            <form id="todo-form" class="todo-form">
+                <input
+                    type="text"
+                    id="todo-input"
+                    placeholder="What needs to be done?"
+                    autocomplete="off"
+                >
+
+                <button type="submit">
+                    Add Task
+                </button>
+            </form>
+
+            <div class="todo-info">
+                <span id="task-count">0 tasks</span>
+
+                <div class="filters">
+                    <button class="filter active" data-filter="all">
+                        All
+                    </button>
+
+                    <button class="filter" data-filter="active">
+                        Active
+                    </button>
+
+                    <button class="filter" data-filter="completed">
+                        Completed
+                    </button>
+                </div>
+            </div>
+
+            <ul id="todo-list"></ul>
+
+            <div id="empty-message" class="empty-message">
+                No tasks yet. Add your first task!
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="scripts/app.js"></script>
+
+</body>
+</html>
