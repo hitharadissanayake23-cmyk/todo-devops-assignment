@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/package",
   "name": "todo-devops-assignment",
   "version": "1.0.0",
   "description": "Advanced Git and DevOps Team Collaboration Todo Application",
